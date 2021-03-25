@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Home</title>
+    <style type="text/css">
+        #article_list h5{
+            margin: 15px 0;
+        }
+
+        #article_list h6{
+            margin: 8px 0;
+        }
+
+        .more{
+            margin-top: 20px;
+            height: 26px;
+            width: 30%;
+            background-color: #f5cd91;
+            vertical-align: middle;
+            margin-left: 35%;
+            border-radius: 6px;
+            
+        }
+        .more span{
+            font-weight: 700;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="headers">
+        <nav>
+            <ul>
+                <li><a href="#" style="border-bottom: 3px dashed black">Home</a></li>
+                <li><a href="./cat.html">Cats</a></li>
+                <li><a href="./dog.html">Dogs</a></li>
+                <li><a href="./hamster.html">Hamster</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="imgBox">
+        <img id="cartoon1" class="cartoon img1" src="images/cartoon-main head.png" alt="icon-cat">
+        <img id="cartoon2" class="cartoon img2" src="images/cartoon-dog head.png" alt="icon-dog">
+        <img id="cartoon3" class="cartoon img3" src="images/cartoon-hamster head.png" alt="icon-hamster">
+        <img class="img-slide img1" src="images/banner-1.jpg" alt="slider-image1">
+        <img class="img-slide img2" src="images/banner-2.jpg" alt="slider-image2">
+        <img class="img-slide img3" src="images/banner-3.jpg" alt="slider-image3">
+        
+        <div class="circle">
+            <ul class="cirbox">
+                <li class="active a1" style="background-color: #ff5000;" onclick="ChangeImg(1)"></li>
+                <li class="active a2" onclick="ChangeImg(2)"></li>
+                <li class="active a3" onclick="ChangeImg(3)"></li>
+            </ul>
+        </div>
+        <p>Time may flow away, but memory will stay</p>
+    </div>
+
+    <div id="article_list">
+        <div id="article1">
+            <h1>We Are Dogs</h1>
+            <img src="images/home-dog1.jpg" alt="Dogs">
+            <h6>HuanHuan</h6>
+            <p>Hi, my name is HuanHuan, and I am a brown color poodle dog. I am the
+                first member in this little home since the year of 2013, which has been
+                about 8 years till now</p>
+            <img src="images/home-dog2.jpg" alt="Dogs">
+            <h6>YouMi</h6>
+            <p>Hi, my name is YouMi, and I am the second member in the little home after
+                Huanhuan. I am a supper supper supper energetic girl, and love going out
+                to run</p>
+            <div class="more"><span>Learn More</span></div>
+        </div>
+        <div id="article2">
+            <h1>I Am a Curious Cat</h1>
+            <img src="images/home-cat.jpg" alt="Cat">
+            <h6>Fafa</h6>
+            <p>I am Fafa, which mean being rich! I am adopted from the shelter in the
+                beginning of the 2021 in the US. I was little nervous about the new
+                environment at first, but I get very comfortable to where I live right now! I love
+                to explore my surroundings, and I notice there is a little hamster lives near me.
+                Wow, do not worry, I will not eat him! I am just curious to know what that is...
+                wait, are you telling me that is a mouse..?</p>
+            <div class="more"><span>Learn More</span></div>
+        </div>
+        <div id="article3">
+            <h1>I Am a Hamster</h1>
+            <div style="background-image: url(images/home-hamster.jpg); background-position: -50px -350px; background-size: 423px auto; height: 181px; width: 323px; margin: 0 auto;" alt="hamster"></div>
+            <h6>ChaCha</h6>
+            <p>Hey, I am Chacha! Please do not judge me by my size, I am actually a senior
+                hamster, turning to 2 years old. And you know what, I may even be one of the
+                few hamsters who ever take airplane! I came all the way from Los Angeles to
+                Michigan, it was a long trip for me. Another crazy thing is there is a cat living
+                near me! But...I do not even know what is a cat? Can I be the good friend with
+                him by sharing my corns?
+                </p>
+            <div class="more"><span>Learn More</span></div>
+        </div>
+    </div>
+    <div id="bottom">
+        <h5 style="font-size: 1600;">This is the site all about pets</h6>
+        <p style="margin: 0px; font-size: xx-small;">@ All Rights Reserved by Little Home</p>
+    </div>
+    <!-- Slider -->
+    <script>
+        var index=0;
+            function ChangeImg(indexL) {
+                index++;
+                console.log(indexL)
+                var a=document.getElementsByClassName("img-slide");
+                var t=document.getElementsByClassName("cartoon");
+                var b=document.getElementsByClassName("active");
+                for(var i=0;i<a.length;i++){
+                    if(indexL != i+1){
+                        a[i].style.display='none';
+                        t[i].style.display='none';
+                        b[i].style.backgroundColor ='#fff';
+                    }else{
+                        a[i].style.display='block';
+                        t[i].style.display='block';
+                        b[i].style.backgroundColor ='#ff5000';
+                    }
+                }
+            }
+    </script>
+</main>
+</body>
+</html>

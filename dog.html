@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .img4{  
+            display: none;
+        }
+        .imgBox{
+            margin: 15px auto;
+            width: 90%;
+        }
+        .circle{
+            bottom: 0px;
+        }
+
+        .circle .cirbox li{
+            background-color:#808080;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="headers">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./cat.html">Cats</a></li>
+                <li><a href="#" style="border-bottom: 3px dashed black">Dogs</a></li>
+                <li><a href="./hamster.html">Hamster</a></li>
+            </ul>
+        </nav>
+    </div>
+    <img class="main_img" src="images/dog-main.jpg" alt="Dog-main image">
+    <div id="cartoon_text">
+        <h1>We Are Energetic Dogs</h1>
+        <p>(HuanHuan - 9 years old | YouMi - 5 years old)</p>
+    </div>
+    <div class="cartoon_box">
+        <img src="images/people.png" alt="icon-having fun">
+        <div style="margin-left: 10px;"><hr/></div>
+        <img style="height: 100px;" src="images/cartoon-dog head.png" alt="Hamster-logo">
+        <div style="margin-right: 10px;"><hr/></div>
+        <img src="images/moon.png" alt="icon-sleeping">
+    </div>
+    <div id="article_list">
+        <div id="article1">
+            <h5>All The Leisure Time</h5>
+            <img src="images/dog-fun1.jpg" alt="dog-fun">
+            <img src="images/dog-fun2.jpg" alt="dog-fun">
+            <img src="images/dog-fun3.jpg" alt="dog-fun">
+            <p>In most of time, we both have fun together, such as going out for a walk.
+                However, we may have different habits when we are home, YouMi always likes
+                to carry her little toy around the house, and I (HuanHuan) like sleeping under
+                the sun while watching the view from the garden
+            </p>
+        </div>
+        <div id="article2" style="margin: 0 0;">
+            <h5 style="margin-bottom: 0;">More Images of Us</h5></div>
+    </div>
+
+    <div class="imgBox">
+        <img class="img-slide img1" src="images/dog-slider1.jpg" alt="1">
+        <img class="img-slide img2" src="images/dog-slider2.jpg" alt="2">
+        <img class="img-slide img3" src="images/dog-slider3.jpg" alt="3">
+        <img class="img-slide img4" src="images/dog-slider4.jpg" alt="3">
+        <div class="circle">
+            <ul class="cirbox">
+                <li class="active a1" style="background-color: #ff5000;" onclick="ChangeImg(1)"></li>
+                <li class="active a2" onclick="ChangeImg(2)"></li>
+                <li class="active a3" onclick="ChangeImg(3)"></li>
+                <li class="active a4" onclick="ChangeImg(4)"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bottom" style="margin-top: 70px;">
+        <h5 style="font-size: 1600;">This is the site all about pets</h6>
+        <p style="margin: 0px; font-size: xx-small;">@ All Rights Reserved by Little Home</p>
+    </div>
+    <script>
+        var index=0;
+            function ChangeImg(indexL) {
+                index++;
+                console.log(indexL)
+                var a=document.getElementsByClassName("img-slide");
+                var b=document.getElementsByClassName("active");
+                for(var i=0;i<a.length;i++){
+                    if(indexL != i+1){
+                        a[i].style.display='none';
+                        b[i].style.backgroundColor ='#808080';
+                    }else{
+                        a[i].style.display='block';
+                        b[i].style.backgroundColor ='#ff5000';
+                    }
+                }
+            }
+    </script>
+</main>
+</body>
+</html>
